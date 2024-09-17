@@ -1,0 +1,6 @@
+Welcome to Full Stack course second lecture
+This time we read/write/delete files
+
+Happy Coding!
+
+// Jukka

@@ -1,0 +1,17 @@
+{
+  "name": "merndemo",
+  "version": "1.0.0",
+  "description": "deployment demo in render",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "demo",
+    "node",
+    "render"
+  ],
+  "author": "Jukka Malinen",
+  "license": "ISC"
+}
