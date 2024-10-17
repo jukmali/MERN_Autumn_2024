@@ -1,7 +1,23 @@
 var express = require("express");
 var app = express();
 var fs = require("fs");
-app.use(express.static("./public/demosite"));
+// app.use(express.static("./public/demosite"));
+var bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.get("/adduser", function(request, response) {
+    response.status(200).sendFile(__dirname + "/public/adduser.html");
+});
+
+app.post("/adduser", function(request, response) { 
+    var data = request.body.name + "\n";  
+    data += request.body.email + "\n";
+    data += request.body.company + "\n";
+
+    console.log(data);
+    response.status(200).send("Data received: " + data);
+});
 
 app.get("/", function(request, response) {  
     response.status(200).sendFile(__dirname + "/public/index.html");
